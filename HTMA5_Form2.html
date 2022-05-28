@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        <form action="./save.html" method="get">
+
+            <h2>Form-1</h2>
+            <input type="text" name="t1" required/>
+
+            <input type="password" placeholder="**********"  pattern="\w{8,30}" name="t2"/>
+
+            <input type="text" name="t3" value="cdac" readonly disabled/>
+
+            <input type="text" name="t4"/>
+
+            <input type="Submit" value="Save"/> 
+            
+            <!--DataList-->
+
+            <input list="cities" name="cities">
+            <datalist id="cities">
+                <option value="Noida">
+                <option value="Delhi">
+                <option value="Dehradun">
+                <option value="Nogpu">
+                <option value="Nagloi">
+                <option value="Patana"></option>
+                <option value="Pune"></option>
+                <option value="Dharmshala"></option>
+                  
+            </datalist>
+            
+            <input type="image" src="../images/submit.png" height="70px" width="70px">
+            
+            <input type="Submit" formnovalidate formmethod="post" formaction="./edit.html" value="Edit"/>
+
+        </form>
+    </pre>
+
+</body>
+</html>

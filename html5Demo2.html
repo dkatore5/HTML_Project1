@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <script type="text/javascript">
+
+        //document.write("hello from JS");
+
+        function writeData(){
+            //selecting textbox and retriving current value
+            var data=document.getElementById("txt1").value;
+            //alert(data);
+            //alert(document.getElementById("div1").innerHTML);
+            document.getElementById("div1").innerHTML=data;
+        }
+
+        var interval=0;
+        function changeprogress(){
+            var pvalue=document.getElementById("p1").value+1;
+            document.getElementById("p1").value=pvalue;
+            document.getElementById("div1").innerHTML=pvalue+"% completed"
+            if(pvalue==100){
+
+                clearInterval(interval);
+                //to redirect on another page
+                window.location="http://www.google.co.in";
+            }
+        }
+
+        window.onload=function(){
+
+            interval=setInterval("changeprogress()",200);
+        }
+
+    </script>
+</head>
+<body>
+    <h2 align="center">Working with HTML5 Tags </h2>
+    <hr>
+    <h3>Meter Tag</h3>
+    Math:<meter min="0" max="10" value="8"></meter><br><br>
+    Science:<meter min="0" max="10" value="9"></meter><br><br>
+    Hin:<meter min="0" max="10" value="6"></meter><br><br>
+    English:<meter min="0" max="10" value="5"></meter><br><br>
+    <h3>Progress Tag</h3>
+    <progress max="100" value="0" id="p1"></progress><br><br>
+
+    <input type="text" id="txt1" placeholder="Enter some data"/><br><br>
+    <input type="button" value="Write in div" onclick="writeData()"/><br>
+    <div id="div1">
+        content goes here
+    </div>
+
+    <!--
+    <script type="text/javascript">
+
+        document.write("hello from JS")
+
+    </script>
+
+    -->
+</body>
+</html>

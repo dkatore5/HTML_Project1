@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style type="text/css">
+        h2{
+            text-align: center;
+            color: green;
+            text-transform: uppercase;
+        }
+        hr{
+            background-color: red;
+            height: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Working with new HTML5 input type element</h2>
+    <hr>
+    <pre>
+        <form autocomplete="off" novalidate>
+            <input type="text" placeholder="Enter Name" required
+            oninvalid="setCustomValidity('Name is Mandatory')"
+            oninput="setCustomValidity('')"/>
+
+            <input type="search" autofocus placeholder="Enter text to be search" name="txtSearch"/> 
+
+            <input type="email" placeholder="Enter Email" autocomplete="off" required name="txtEmail"/>
+
+            <input type="url" placeholder="Enter URL">
+
+            <input type="tel" name="txtMobile" pattern="\d{4}-\d{3}-\d{3}" placeholder="0000-000-000"
+            oninvalid="setCustomValidity('Enter valid Mobile Value as 0000-000-000')"
+            oninput="setCustomValidty('')"/>
+
+            <input type="datetime"/>
+
+            <input type="date" value="2022-04-27"/>
+
+            <input type="month"/>
+
+            <input type="week"/>
+
+            <input type="time"/>
+
+            <input type="datetime-local" min="1990-01-01T00:00" max="2022-01-01T00:00">
+
+            <input type="number" min="20" max="100" step="2">
+
+            <input type="range" min="20" max="500">
+
+            <input type="color">
+
+            <input type="submit" value="Register Me"/>
+        </form>
+    </pre>
+</body>
+</html>
